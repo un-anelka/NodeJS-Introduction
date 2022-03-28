@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">15.38% </span>
+                <span class="strong">30.76% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/39</span>
+                <span class='fraction'>12/39</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>2/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.21% </span>
+                <span class="strong">32.43% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/37</span>
+                <span class='fraction'>12/37</span>
             </div>
         
             
@@ -268,11 +268,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -280,7 +278,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -291,12 +291,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -465,11 +465,11 @@
 import * as fs from "fs";
 import formidable from "formidable";
 &nbsp;
-const blogPost = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
+const blogPost = async (req, res) =&gt; {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    try {</span>
+    try {
 &nbsp;
-        const blogs = <span class="cstat-no" title="statement not covered" >await blogsModel.create({</span>
+        const blogs = await blogsModel.create({
             author: "UN",
             title: req.body.title,
             image: req.body.image,
@@ -479,7 +479,7 @@ const blogPost = <span class="fstat-no" title="function not covered" >as</span>y
 &nbsp;
 &nbsp;
         })
-<span class="cstat-no" title="statement not covered" >        res.status(201).json({</span>
+        res.status(201).json({
             message: "blog has been created successfully",
             data: blogs
         })
@@ -489,13 +489,13 @@ const blogPost = <span class="fstat-no" title="function not covered" >as</span>y
 &nbsp;
 };
 &nbsp;
-const blogGetAll = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-<span class="cstat-no" title="statement not covered" >    try {</span>
-        const blogs = <span class="cstat-no" title="statement not covered" >await blogsModel.find().sort({</span>
+const blogGetAll = async (req, res) =&gt; {
+    try {
+        const blogs = await blogsModel.find().sort({
             date: "-1"
         });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        res.status(200).json({</span>
+        res.status(200).json({
             message: "Todos are fetched successfully",
             data: blogs
         })
@@ -667,7 +667,7 @@ export { blogPost, blogGetAll, blogUpdate, blogDelete, blogGetOne, blogDuplicate
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sun Mar 27 2022 19:21:51 GMT+0200 (Central Africa Time)
+                at Mon Mar 28 2022 17:49:45 GMT+0200 (Central Africa Time)
             </div>
         <script src="../../../prettify.js"></script>
         <script>

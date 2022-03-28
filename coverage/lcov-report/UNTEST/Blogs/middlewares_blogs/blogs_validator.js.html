@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">15.38% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">22.22% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/9</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -90,20 +90,20 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -111,21 +111,21 @@
 &nbsp;
 const blogs = blogsModel.find();
 // console.log(blogs)
-const BlogValidator = <span class="fstat-no" title="function not covered" >as</span>ync(req, res, next) =&gt; {
-    const blogs= <span class="cstat-no" title="statement not covered" >await blogsModel.find();</span>
+const BlogValidator = async(req, res, next) =&gt; {
+    const blogs= await blogsModel.find();
     // console.log(blogs);
 &nbsp;
     //validating blog emails
-    let {title, content} = <span class="cstat-no" title="statement not covered" >req.body</span>
-<span class="cstat-no" title="statement not covered" >    if(!title) <span class="cstat-no" title="statement not covered" >return res.json({error: 'title missing'});</span></span>
-<span class="cstat-no" title="statement not covered" >    if(!content) <span class="cstat-no" title="statement not covered" >return res.json({error: 'content missing'});</span></span>
-    const repeatedblog=<span class="cstat-no" title="statement not covered" >await blogs.find(<span class="fstat-no" title="function not covered" >(u</span>) =&gt; <span class="cstat-no" title="statement not covered" >u.title === title)</span></span>
-<span class="cstat-no" title="statement not covered" >    if(repeatedblog) <span class="cstat-no" title="statement not covered" >return res.json(</span></span>
+    let {title, content} = req.body
+    if(!title) return res.json({error: 'title missing'});
+    if(!content) return res.json({error: 'content missing'});
+    const repeatedblog=await blogs.find((u) =&gt; u.title === title)
+    if(repeatedblog) return res.json(
       {
       message: `blog with title ${title} exists`,
       // blog: repeatedblog
   })
-<span class="cstat-no" title="statement not covered" >    next();</span>
+    next();
   }
 &nbsp;
 &nbsp;
@@ -136,7 +136,7 @@ const BlogValidator = <span class="fstat-no" title="function not covered" >as</s
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sun Mar 27 2022 19:21:51 GMT+0200 (Central Africa Time)
+                at Mon Mar 28 2022 17:49:45 GMT+0200 (Central Africa Time)
             </div>
         <script src="../../../prettify.js"></script>
         <script>
