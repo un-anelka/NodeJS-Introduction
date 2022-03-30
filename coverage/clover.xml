@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1648482585340" clover="3.2.0">
-  <project timestamp="1648482585340" name="All files">
-    <metrics statements="289" coveredstatements="139" conditionals="78" coveredconditionals="28" methods="45" coveredmethods="14" elements="412" coveredelements="181" complexity="0" loc="289" ncloc="289" packages="20" files="20" classes="20"/>
+<coverage generated="1648537348341" clover="3.2.0">
+  <project timestamp="1648537348341" name="All files">
+    <metrics statements="289" coveredstatements="140" conditionals="78" coveredconditionals="30" methods="45" coveredmethods="15" elements="412" coveredelements="185" complexity="0" loc="289" ncloc="289" packages="20" files="20" classes="20"/>
     <package name="UNTEST">
       <metrics statements="17" coveredstatements="16" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="server.js" path="/Users/andela/Desktop/UN/UNTEST/server.js">
@@ -34,13 +34,13 @@
       </file>
     </package>
     <package name="UNTEST.Blogs.Controllers_Blog">
-      <metrics statements="37" coveredstatements="12" conditionals="6" coveredconditionals="0" methods="7" coveredmethods="2"/>
+      <metrics statements="37" coveredstatements="9" conditionals="6" coveredconditionals="0" methods="7" coveredmethods="1"/>
       <file name="blogs_functions.js" path="/Users/andela/Desktop/UN/UNTEST/Blogs/Controllers_Blog/blogs_functions.js">
-        <metrics statements="37" coveredstatements="12" conditionals="6" coveredconditionals="0" methods="7" coveredmethods="2"/>
+        <metrics statements="37" coveredstatements="9" conditionals="6" coveredconditionals="0" methods="7" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
@@ -89,9 +89,9 @@
       </file>
     </package>
     <package name="UNTEST.Blogs.middlewares_blogs">
-      <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+      <metrics statements="9" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
       <file name="blogs_validator.js" path="/Users/andela/Desktop/UN/UNTEST/Blogs/middlewares_blogs/blogs_validator.js">
-        <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <metrics statements="9" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
@@ -99,8 +99,8 @@
         <line num="11" count="4" type="cond" truecount="2" falsecount="0"/>
         <line num="12" count="3" type="cond" truecount="2" falsecount="0"/>
         <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="19" count="1" type="stmt"/>
+        <line num="14" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="19" count="0" type="stmt"/>
       </file>
     </package>
     <package name="UNTEST.Comment.Comments_routes">
@@ -278,15 +278,15 @@
       </file>
     </package>
     <package name="UNTEST.Subscription.middlewares_subscriptions">
-      <metrics statements="7" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="7" coveredstatements="6" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <file name="Subscription_validator.js" path="/Users/andela/Desktop/UN/UNTEST/Subscription/middlewares_subscriptions/Subscription_validator.js">
-        <metrics statements="7" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="7" coveredstatements="6" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="17" count="0" type="stmt"/>
       </file>
     </package>
@@ -317,13 +317,13 @@
         <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="6" count="17" type="stmt"/>
-        <line num="10" count="17" type="stmt"/>
-        <line num="11" count="17" type="cond" truecount="1" falsecount="1"/>
-        <line num="12" count="17" type="cond" truecount="1" falsecount="1"/>
-        <line num="13" count="17" type="stmt"/>
-        <line num="14" count="17" type="cond" truecount="1" falsecount="1"/>
-        <line num="19" count="17" type="stmt"/>
+        <line num="6" count="21" type="stmt"/>
+        <line num="10" count="21" type="stmt"/>
+        <line num="11" count="21" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="21" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="21" type="stmt"/>
+        <line num="14" count="21" type="cond" truecount="1" falsecount="1"/>
+        <line num="19" count="21" type="stmt"/>
       </file>
     </package>
     <package name="UNTEST.Usersfolder.middlewares_users">
@@ -331,16 +331,16 @@
       <file name="users_functions.js" path="/Users/andela/Desktop/UN/UNTEST/Usersfolder/middlewares_users/users_functions.js">
         <metrics statements="79" coveredstatements="33" conditionals="30" coveredconditionals="11" methods="15" coveredmethods="5"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="9" count="17" type="stmt"/>
-        <line num="10" count="17" type="stmt"/>
-        <line num="11" count="17" type="stmt"/>
-        <line num="13" count="17" type="stmt"/>
-        <line num="14" count="17" type="stmt"/>
-        <line num="15" count="17" type="cond" truecount="4" falsecount="0"/>
-        <line num="16" count="16" type="stmt"/>
+        <line num="9" count="21" type="stmt"/>
+        <line num="10" count="21" type="stmt"/>
+        <line num="11" count="21" type="stmt"/>
+        <line num="13" count="21" type="stmt"/>
+        <line num="14" count="21" type="stmt"/>
+        <line num="15" count="21" type="cond" truecount="4" falsecount="0"/>
+        <line num="16" count="20" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="23" count="17" type="stmt"/>
-        <line num="33" count="17" type="stmt"/>
+        <line num="23" count="21" type="stmt"/>
+        <line num="33" count="21" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
         <line num="50" count="1" type="stmt"/>
         <line num="51" count="0" type="stmt"/>
@@ -392,9 +392,9 @@
         <line num="171" count="0" type="stmt"/>
         <line num="175" count="1" type="stmt"/>
         <line num="181" count="1" type="stmt"/>
-        <line num="182" count="3" type="stmt"/>
-        <line num="183" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="184" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="182" count="5" type="stmt"/>
+        <line num="183" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="184" count="5" type="cond" truecount="1" falsecount="1"/>
         <line num="186" count="0" type="stmt"/>
         <line num="187" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="188" count="0" type="stmt"/>

@@ -5,4 +5,5 @@ Schema.js
 node_modules
 .env
 Token
+coverage
 

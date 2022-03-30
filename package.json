@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "test": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
-    "start": "set NODE_ENV= development&& node server.js",
-    "start-prod": "set NODE_ENV= production&& node server.js",
-    "dev": "nodemon server.js",
-    "index": "nodemon index.js"
+    "start": "set NODE_ENV= development&& node src",
+    "start-prod": "set NODE_ENV= production&& node src",
+    "dev": "nodemon src"
+  
   },
   "author": "UN author",
   "license": "ISC",

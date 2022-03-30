@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 import request from "supertest"
-import app from "./../server.js"
+import app from "../index.js"
 import 'dotenv/config';
 import usersModel from "../Usersfolder/users_Schema.js";
 import blogsModel from "../Blogs/blogs_Schema.js";
@@ -204,7 +204,7 @@ describe("Testing blog routes", () => {
             const response = await request(app)
                 .get("/getAllBlogs")
                 .expect(200)
-            console.log(response)
+            // console.log(response)
         });
     });
 
@@ -273,15 +273,90 @@ describe("Testing contacts routes", () => {
         })
     })
 
+    describe("Testing update routes", () => {
+        test("should update query", async () => {
+
+            let updated = {
+                message: "Hello world"
+            }
+            const id = "62408f04810f6e93a6f3cb48";
+            const deletequery = await request(app)
+                .put(`/updatecontact/${id}`)
+                .set("authorization", auth.token)
+                .send(updated);
+            expect(500)
+        })
+    })
     describe("Testing delete routes", () => {
         test("should delete query", async () => {
             const id = "62408f04810f6e93a6f3cb48";
             const deletequery = await request(app)
-                .delete(`/deleteblog/${id}`)
+                .delete(`/deletecontact/${id}`)
                 .set("authorization", auth.token);
             expect("deleted")
         })
     })
+
+});
+
+
+
+//TESTING SUBSCRIPTION ROUTES
+describe("Testing subscription routes", () => {
+    describe("Testing creation of subscription", () => {
+        test("Should create subscription", async () => {
+            const sub1 = {
+                email: "un@nad.com"
+            }
+
+            const query = await request(app).post("/createsubscription")
+                .send(sub1).expect(201)
+        })
+    })
+    describe("Testing retrieving all subscription", () => {
+        test("Should get all subscription", async () => {
+            console.log(auth.token)
+            const query = await request(app)
+                .get("/getAllsubscriptions")
+                .set("authorization", auth.token);
+            expect(200)
+
+        })
+    })
+    describe("Testing missing keys", () => {
+        test("Should return error for missing message", async () => {
+            const sub2 = {}
+            const query = await request(app)
+                .post("/createsubscription")
+                .send(sub2)
+                .expect(200)
+                .expect({ "error": "email missing" })
+        })
+    })
+
+    // describe("Testing update routes", () => {
+    //     test("should update query", async () => {
+
+    //         let updated = {
+    //             message: "Hello world"
+    //         }
+    //         const id = "62408f04810f6e93a6f3cb48";
+    //         const deletequery = await request(app)
+    //             .put(`/updatecontact/${id}`)
+    //             .set("authorization", auth.token)
+    //             .send(updated);
+    //         expect("updated")
+    //     })
+    // })
+    // describe("Testing delete routes", () => {
+    //     test("should delete query", async () => {
+    //         const id = "62408f04810f6e93a6f3cb48";
+    //         const deletequery = await request(app)
+    //             .delete(`/deletecontact/${id}`)
+    //             .set("authorization", auth.token);
+    //         expect("deleted")
+    //     })
+    // })
 
 });
 
