@@ -1,5 +1,5 @@
 import usersModel from "../../Usersfolder/users_Schema.js";
-import blogsModel from "../../src/Blogs/blogs_Schema.js";
+import blogsModel from "../../Blogs/blogs_Schema.js";
 
 
 
