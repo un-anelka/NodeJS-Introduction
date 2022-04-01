@@ -59,7 +59,8 @@ app.listen(Port, async () => {
     }
     app.use(cors({
         origin: "*",
-        origin: "http://127.0.0.1:5501"
+        origin: "http://127.0.0.1:5501",
+        origin: "https://unbrand.netlify.app"
     }))
     app.use(userrouter);
     app.use(blogrouter);
